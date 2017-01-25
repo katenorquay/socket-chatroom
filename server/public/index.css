@@ -1,0 +1,21 @@
+.chatlog {
+  background-color: pink;
+  width: 100%;
+  height: 300px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: purple;
+}
+
+#message {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}

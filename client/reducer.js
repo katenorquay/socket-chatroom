@@ -6,6 +6,9 @@ function reducer(state, action) {
   switch(type) {
     case 'INIT':
       return newState
+    case 'ADD_MESSAGE':
+    newState.messages.push(payload)
+      return newState
     default:
         return newState
   }

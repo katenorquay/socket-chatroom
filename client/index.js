@@ -14,7 +14,7 @@ var main = document.querySelector('main')
 
 store.subscribe( () => {
   var state = store.getState()
-  render(<App name="changing it all" state={state} dispatch={store.dispatch}/>, main)
+  render(<App state={state} dispatch={store.dispatch}/>, main)
 })
 
 store.dispatch({type: 'INIT'})
