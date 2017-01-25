@@ -1,16 +1,21 @@
 var React = require('react')
+var render = require('react-dom').render
+var io = require('socket.io-client')
+var socket = io('localhost:3000')
 
 function App({state, dispatch}) {
   function addMessage (e) {
     e.preventDefault()
     var message = document.getElementById('message').value
-    dispatch({type: 'ADD_MESSAGE', payload: message})
+    socket.emit('chat', message)
   }
 
   return ( <div>
     <h1>chat-chat</h1>
     <div className='chatlog'>
-      <p>{state.messages}</p>
+      {state.messages.map((message) => {
+        return <p>{message}</p>
+      })}
     </div>
     <form>
       <input type='text' placeholder='message' id='message'/>

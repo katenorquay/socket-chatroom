@@ -9,13 +9,9 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
-io.on('connection', function(client) {
-  console.log('someone connected')
-  client.on('disconnect', function() {
-    console.log('user disconnected')
-  })
-  client.on('chat message', function(message) {
-    io.emit('chat message', message)
+io.on('connection', function(socket) {
+  socket.on('chat', function(message) {
+    io.emit('chat', message)
   })
 })
 
