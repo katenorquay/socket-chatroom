@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "build": "watchify client/index.js -o server/public/bundle.js -v -g uglifyify",
-    "test": "browserify test/index.js | node | tap-spec",
-    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
-    "deploy": "npm run build && npm run dist && npm run push"
+    "build": "watchify client/index.js -o server/public/bundle.js -g uglifyify",
+    "test": "browserify test/index.js | node | tap-spec"
   },
   "browserify": {
     "transform": [
@@ -22,15 +20,18 @@
     "babel": "^6.5.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
+    "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "budo": "^9.4.5",
     "clone": "^2.1.0",
+    "express": "^4.14.0",
     "nodemon": "^1.11.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "redux": "^3.6.0",
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2",
+    "uglifyify": "^3.0.4",
     "watchify": "^3.9.0"
   }
 }
