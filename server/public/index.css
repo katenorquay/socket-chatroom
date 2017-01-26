@@ -32,11 +32,19 @@ h1 {
   border: solid 1px #b3b3b3;
 }
 
-.msg {
+
+.username {
   font-size: 16px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  float: left;
+}
+
+.red {
   background-color: #ff4d4d;
+  font-size: 16px;
   border-radius: 20px;
-  color: white;
+  color: black;
   box-sizing: border-box;
   padding: 8px 0 8px 0;
   font-family: sans-serif;
@@ -44,9 +52,36 @@ h1 {
   margin-left: 50px;
 }
 
-.username {
+.blue {
+  background-color: #4db8ff;
   font-size: 16px;
+  border-radius: 20px;
+  color: black;
+  box-sizing: border-box;
+  padding: 8px 0 8px 0;
   font-family: sans-serif;
   letter-spacing: 1px;
-  float: left;
+  margin-left: 50px;
+}
+.green {
+  background-color: #66ff66;
+  font-size: 16px;
+  border-radius: 20px;
+  color: black;
+  box-sizing: border-box;
+  padding: 8px 0 8px 0;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  margin-left: 50px;
+}
+.yellow {
+  background-color: #ffff4d;
+  font-size: 16px;
+  border-radius: 20px;
+  color: black;
+  box-sizing: border-box;
+  padding: 8px 0 8px 0;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  margin-left: 50px;
 }
