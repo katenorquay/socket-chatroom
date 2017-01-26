@@ -37,10 +37,14 @@ function App({state, dispatch}) {
       })}
     </div>
     <form>
-      <input type="radio" id="red" value="red"/>
-      <input type="radio" id="blue" value="blue" />
-      <input type="radio" id="green" value="green" />
-      <input type="radio" id="yellow" value="yellow" />
+      <input type="radio" name="color" id="red" value="red"/>
+      <label for="red" id="red-label">Red</label>
+      <input type="radio" name="color" id="blue" value="blue" />
+      <label for="blue" id="blue-label">Blue</label>
+      <input type="radio" name="color" id="green" value="green" />
+      <label for="green" id="green-label">Green</label>
+      <input type="radio" name="color" id="yellow" value="yellow" />
+      <label for="yellow" id="yellow-label">Yellow</label>
     </form>
     <form>
       <input className='input' type='text' placeholder='User Name' id='username'/>

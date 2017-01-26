@@ -40,6 +40,18 @@ h1 {
   float: left;
 }
 
+/*.msg {
+  font-size: 16px;
+  border-radius: 20px;
+  color: black;
+  box-sizing: border-box;
+  padding: 8px 0 8px 0;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  margin-left: 50px;
+  background-color: black;
+}*/
+
 .red {
   background-color: #ff4d4d;
   font-size: 16px;
@@ -86,68 +98,28 @@ h1 {
   margin-left: 50px;
 }
 
-#red {
-  margin-left: 15px;
-}
-
-#blue {
-  margin-left: 15px;
-}
-
-#yellow {
-  margin-left: 15px;
-}
-
-#green {
-  margin-left: 15px;
-}
-
-#red:after {
+input[type="radio"] {
   width: 20px;
   height: 20px;
-  border-radius: 15px;
-  top: -2px;
-  left: -7px;
-  position: relative;
-  background-color: #ff4d4d;
-  content: '';
-  display: inline-block;
-  visibility: visible;
 }
 
-#blue:after {
-  width: 20px;
-  height: 20px;
-  border-radius: 15px;
-  top: -2px;
-  left: -7px;
-  position: relative;
-  background-color: #4db8ff;
-  content: '';
-  display: inline-block;
-  visibility: visible;
+label {
+  font-size: 16px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
 }
-#yellow:after {
-  width: 20px;
-  height: 20px;
-  border-radius: 15px;
-  top: -2px;
-  left: -7px;
-  position: relative;
-  background-color: #ffff4d;
-  content: '';
-  display: inline-block;
-  visibility: visible;
+
+#red-label{
+  color: #ff4d4d;
 }
-#green:after {
-  width: 20px;
-  height: 20px;
-  border-radius: 15px;
-  top: -2px;
-  left: -7px;
-  position: relative;
-  background-color:  #66ff66;
-  content: '';
-  display: inline-block;
-  visibility: visible;
+
+#blue-label {
+  color: #4db8ff;
+}
+
+#yellow-label {
+  color: #ffff4d;
+}
+#green-label {
+  color:  #66ff66;
 }
