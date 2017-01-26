@@ -18,8 +18,10 @@ function App({state, dispatch}) {
       })}
     </div>
     <form>
-      <input type='text' placeholder='message' id='message'/>
-      <input type='submit' value='submit' onClick={addMessage}/>
+      <div className ='form'>
+        <input type='text' placeholder='message' id='message'/>
+        <input id="submit" type='submit' value='Send' onClick={addMessage}/>
+      </div>
     </form>
   </div>
   )
