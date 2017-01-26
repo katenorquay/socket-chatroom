@@ -10,18 +10,29 @@ function App({state, dispatch}) {
     socket.emit('chat', message)
   }
 
+  function addUser (e) {
+    e.preventDefault()
+    var username = document.getElementById('username').value
+    dispatch({type: 'ADD_USER', payload: username})
+  }
+
   return ( <div>
     <h1>chat-chat</h1>
     <div className='chatlog'>
       {state.messages.map((message) => {
-        return <p>{message}</p>
+        return <div className='chat'>
+          <p className='username'>{state.username}</p>
+          <p className='msg'>{message}</p>
+         </div>
       })}
     </div>
     <form>
-      <div className ='form'>
-        <input type='text' placeholder='message' id='message'/>
-        <input id="submit" type='submit' value='Send' onClick={addMessage}/>
-      </div>
+      <input className='input' type='text' placeholder='User Name' id='username'/>
+      <input id="submit" type='submit' value='Sign In' onClick={addUser}/>
+    </form>
+    <form>
+      <input className='input' type='text' placeholder='Message' id='message'/>
+      <input id="submit" type='submit' value='Send' onClick={addMessage}/>
     </form>
   </div>
   )

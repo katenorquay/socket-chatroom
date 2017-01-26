@@ -7,7 +7,8 @@ var io = require('socket.io-client')
 var socket = io('localhost:3000')
 
 const initialState = {
-  messages: []
+  messages: [],
+  username: ''
 }
 
 const store = createStore(reducer, initialState)
