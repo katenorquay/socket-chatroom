@@ -1,22 +1,17 @@
 var React = require('react')
 var render = require('react-dom').render
 var io = require('socket.io-client')
-var socket = io('localhost:3000')
+var socket = io(':3000')
 
 function App({state, dispatch}) {
   function addMessage (e) {
     e.preventDefault()
-    var color = null
-    var colors = document.getElementsByClassName('radio')
-    console.log(colors)
-    if (document.getElementById('red').checked) {
-      color = 'red'
-    } else if(document.getElementById('blue').checked) {
-      color = 'blue'
-    }  else if(document.getElementById('yellow').checked) {
-      color = 'yellow'
-    }  else if(document.getElementById('green').checked) {
-      color = 'green'
+    var radios = document.getElementsByTagName('input');
+    var color;
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].type === 'radio' && radios[i].checked) {
+        color = radios[i].value;
+      }
     }
     var message = {
     username: document.getElementById('username').value,
@@ -42,10 +37,10 @@ function App({state, dispatch}) {
       })}
     </div>
     <form>
-      <input className='radio' type="radio" name="color" id="red" value="Red"/>
-      <input className='radio' type="radio" name="color" id="blue" value="Blue" />
-      <input className='radio' type="radio" name="color" id="green" value="Green" />
-      <input className='radio' type="radio" name="color" id="yellow" value="Yellow" />
+      <input type="radio" id="red" value="red"/>
+      <input type="radio" id="blue" value="blue" />
+      <input type="radio" id="green" value="green" />
+      <input type="radio" id="yellow" value="yellow" />
     </form>
     <form>
       <input className='input' type='text' placeholder='User Name' id='username'/>

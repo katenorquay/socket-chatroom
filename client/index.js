@@ -4,7 +4,7 @@ var createStore = require('redux').createStore
 var App = require('./components/App')
 var reducer = require('./reducer')
 var io = require('socket.io-client')
-var socket = io('localhost:3000')
+var socket = io(':3000')
 
 const initialState = {
   messages: [],
