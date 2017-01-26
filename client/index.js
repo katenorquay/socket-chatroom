@@ -8,7 +8,6 @@ var socket = io('localhost:3000')
 
 const initialState = {
   messages: [],
-  username: ''
 }
 
 const store = createStore(reducer, initialState)

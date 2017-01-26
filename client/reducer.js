@@ -7,9 +7,6 @@ function reducer(state, action) {
     case 'ADD_MESSAGE':
       newState.messages.push(payload)
       return newState
-    case 'ADD_USER':
-      newState.username = payload
-      return newState
     default:
         return newState
   }

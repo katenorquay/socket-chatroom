@@ -6,31 +6,26 @@ var socket = io('localhost:3000')
 function App({state, dispatch}) {
   function addMessage (e) {
     e.preventDefault()
-    var message = document.getElementById('message').value
+    var message = {
+    username: document.getElementById('username').value,
+    text: document.getElementById('message').value
+    }
     socket.emit('chat', message)
   }
 
-  function addUser (e) {
-    e.preventDefault()
-    var username = document.getElementById('username').value
-    dispatch({type: 'ADD_USER', payload: username})
-  }
 
   return ( <div>
     <h1>chat-chat</h1>
     <div className='chatlog'>
       {state.messages.map((message) => {
         return <div className='chat'>
-          <p className='username'>{state.username}</p>
-          <p className='msg'>{message}</p>
+          <p className='username'>{message.username}:</p>
+          <p className='msg'>{message.text}</p>
          </div>
       })}
     </div>
     <form>
       <input className='input' type='text' placeholder='User Name' id='username'/>
-      <input id="submit" type='submit' value='Sign In' onClick={addUser}/>
-    </form>
-    <form>
       <input className='input' type='text' placeholder='Message' id='message'/>
       <input id="submit" type='submit' value='Send' onClick={addMessage}/>
     </form>
