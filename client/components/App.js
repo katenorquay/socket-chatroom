@@ -7,6 +7,8 @@ function App({state, dispatch}) {
   function addMessage (e) {
     e.preventDefault()
     var color = null
+    var colors = document.getElementsByClassName('radio')
+    console.log(colors)
     if (document.getElementById('red').checked) {
       color = 'red'
     } else if(document.getElementById('blue').checked) {
@@ -40,10 +42,10 @@ function App({state, dispatch}) {
       })}
     </div>
     <form>
-      <input type="radio" name="color" id="red" value="Red"/>
-      <input type="radio" name="color" id="blue" value="Blue" />
-      <input type="radio" name="color" id="green" value="Green" />
-      <input type="radio" name="color" id="yellow" value="Yellow" />
+      <input className='radio' type="radio" name="color" id="red" value="Red"/>
+      <input className='radio' type="radio" name="color" id="blue" value="Blue" />
+      <input className='radio' type="radio" name="color" id="green" value="Green" />
+      <input className='radio' type="radio" name="color" id="yellow" value="Yellow" />
     </form>
     <form>
       <input className='input' type='text' placeholder='User Name' id='username'/>
