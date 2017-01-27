@@ -1,5 +1,7 @@
 var React = require('react')
 var render = require('react-dom').render
+var io = require('socket.io-client')
+var socket = io(':3000')
 
 function Admin({state, dispatch}) {
   function Login(e) {

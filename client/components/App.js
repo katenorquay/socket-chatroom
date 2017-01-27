@@ -8,7 +8,9 @@ function App({state, dispatch}) {
   function addMessage (e) {
     e.preventDefault()
     var message = {
-    text: document.getElementById('message').value
+    user: state.currentUser.username,
+    text: document.getElementById('message').value,
+    color: state.currentUser.color
     }
     socket.emit('chat', message)
   }
@@ -19,12 +21,12 @@ function App({state, dispatch}) {
     <div className='chatlog'>
       {state.messages.map((message) => {
         console.log(state)
-        var redClass = state.user.color === 'red' ? 'red' : ''
-        var blueClass = state.user.color === 'blue' ? 'blue' : ''
-        var greenClass = state.user.color === 'green' ? 'green' : ''
-        var yellowClass = state.user.color === 'yellow' ? 'yellow' : ''
+        var redClass = message.color === 'red' ? 'red' : ''
+        var blueClass = message.color === 'blue' ? 'blue' : ''
+        var greenClass = message.color === 'green' ? 'green' : ''
+        var yellowClass = message.color === 'yellow' ? 'yellow' : ''
         return <div className='chat'>
-          <p className='username'>{state.user.username}:</p>
+          <p className='username'>{message.user}:</p>
           <p className={redClass + blueClass + greenClass + yellowClass}>{message.text}</p>
          </div>
       })}

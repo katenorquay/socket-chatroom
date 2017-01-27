@@ -13,6 +13,9 @@ io.on('connection', function(socket) {
   socket.on('chat', function(message) {
     io.emit('chat', message)
   })
+  // socket.on('login', function(user) {
+  //   io.emit('login', user)
+  // })
 })
 
 http.listen(3000, function() {

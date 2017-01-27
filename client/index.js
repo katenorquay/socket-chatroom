@@ -8,7 +8,7 @@ var socket = io(':3000')
 
 const initialState = {
   loggedin: false,
-  user: {},
+  currentUser: {},
   messages: []
 }
 
@@ -26,3 +26,7 @@ store.dispatch({type: 'INIT'})
 socket.on('chat', function(message) {
   store.dispatch({type:'ADD_MESSAGE', payload: message})
 })
+
+// socket.on('login', function (user) {
+//   store.dispatch({type: 'ADD_USER', payload: user})
+// })
