@@ -8,7 +8,7 @@ var socket = io(':3000')
 
 const initialState = {
   loggedin: false,
-  user: [],
+  user: {},
   messages: []
 }
 

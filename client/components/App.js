@@ -18,12 +18,13 @@ function App({state, dispatch}) {
     <Admin state={state} dispatch={dispatch} />
     <div className='chatlog'>
       {state.messages.map((message) => {
-        var redClass = message.color === 'red' ? 'red' : ''
-        var blueClass = message.color === 'blue' ? 'blue' : ''
-        var greenClass = message.color === 'green' ? 'green' : ''
-        var yellowClass = message.color === 'yellow' ? 'yellow' : ''
+        console.log(state)
+        var redClass = state.user.color === 'red' ? 'red' : ''
+        var blueClass = state.user.color === 'blue' ? 'blue' : ''
+        var greenClass = state.user.color === 'green' ? 'green' : ''
+        var yellowClass = state.user.color === 'yellow' ? 'yellow' : ''
         return <div className='chat'>
-          <p className='username'>{message.username}:</p>
+          <p className='username'>{state.user.username}:</p>
           <p className={redClass + blueClass + greenClass + yellowClass}>{message.text}</p>
          </div>
       })}

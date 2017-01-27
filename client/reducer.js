@@ -8,7 +8,7 @@ function reducer(state, action) {
       newState.messages.push(payload)
       return newState
     case 'ADD_USER':
-      newState.user.push(payload)
+      newState.user = payload
       newState.loggedin = true
       return newState
     default:
