@@ -2,28 +2,20 @@ var React = require('react')
 var render = require('react-dom').render
 var io = require('socket.io-client')
 var socket = io(':3000')
+var Admin = require('./Admin')
 
 function App({state, dispatch}) {
   function addMessage (e) {
     e.preventDefault()
-    var radios = document.getElementsByTagName('input');
-    var color;
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].type === 'radio' && radios[i].checked) {
-        color = radios[i].value;
-      }
-    }
     var message = {
-    username: document.getElementById('username').value,
-    text: document.getElementById('message').value,
-    color: color
+    text: document.getElementById('message').value
     }
     socket.emit('chat', message)
   }
 
-
   return ( <div>
     <h1>chat-chat</h1>
+    <Admin state={state} dispatch={dispatch} />
     <div className='chatlog'>
       {state.messages.map((message) => {
         var redClass = message.color === 'red' ? 'red' : ''
@@ -37,17 +29,6 @@ function App({state, dispatch}) {
       })}
     </div>
     <form>
-      <input type="radio" name="color" id="red" value="red"/>
-      <label for="red" id="red-label">Red</label>
-      <input type="radio" name="color" id="blue" value="blue" />
-      <label for="blue" id="blue-label">Blue</label>
-      <input type="radio" name="color" id="green" value="green" />
-      <label for="green" id="green-label">Green</label>
-      <input type="radio" name="color" id="yellow" value="yellow" />
-      <label for="yellow" id="yellow-label">Yellow</label>
-    </form>
-    <form>
-      <input className='input' type='text' placeholder='User Name' id='username'/>
       <input className='input' type='text' placeholder='Message' id='message'/>
       <input id="submit" type='submit' value='Send' onClick={addMessage}/>
     </form>

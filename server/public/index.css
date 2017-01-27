@@ -6,7 +6,7 @@
 
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
   color: #4db8ff;
   font-family: 'Lobster', cursive;
 }
@@ -37,7 +37,8 @@ h1 {
   font-size: 16px;
   font-family: sans-serif;
   letter-spacing: 1px;
-  float: left;
+  position: absolute;
+  left: 10px;
 }
 
 /*.msg {
@@ -61,7 +62,7 @@ h1 {
   padding: 8px 0 8px 0;
   font-family: sans-serif;
   letter-spacing: 1px;
-  margin-left: 50px;
+  margin-left: 110px;
 }
 
 .blue {
@@ -73,8 +74,9 @@ h1 {
   padding: 8px 0 8px 0;
   font-family: sans-serif;
   letter-spacing: 1px;
-  margin-left: 50px;
+  margin-left: 110px;
 }
+
 .green {
   background-color: #66ff66;
   font-size: 16px;
@@ -84,8 +86,9 @@ h1 {
   padding: 8px 0 8px 0;
   font-family: sans-serif;
   letter-spacing: 1px;
-  margin-left: 50px;
+  margin-left: 110px;
 }
+
 .yellow {
   background-color: #ffff4d;
   font-size: 16px;
@@ -95,31 +98,33 @@ h1 {
   padding: 8px 0 8px 0;
   font-family: sans-serif;
   letter-spacing: 1px;
-  margin-left: 50px;
+  margin-left: 110px;
 }
 
 input[type="radio"] {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 label {
-  font-size: 16px;
+  font-size: 20px;
   font-family: sans-serif;
   letter-spacing: 1px;
+  color: white;
+  font-family: 'Lobster', cursive;
+  margin-right: 15px;
 }
 
-#red-label{
-  color: #ff4d4d;
+.color-selector {
+  display: block;
+  background-color: #ff4d4d;
+  width: 365px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
-#blue-label {
-  color: #4db8ff;
-}
-
-#yellow-label {
-  color: #ffff4d;
-}
-#green-label {
-  color:  #66ff66;
+.hide {
+  display: none;
 }
