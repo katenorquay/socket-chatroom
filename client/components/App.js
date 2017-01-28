@@ -15,15 +15,14 @@ function App({state, dispatch}) {
     socket.emit('chat', message)
   }
 
-  var newClass = state.loggedin === false ? 'hide': 'chatlog'
-  var lastClass = state.loggedin === false ? 'hide': ''
+  var messageClass = state.loggedin === false ? 'hide': 'chatlog'
+  var formClass = state.loggedin === false ? 'hide': ''
 
   return ( <div>
     <h1>chat-chat</h1>
     <Admin state={state} dispatch={dispatch} />
-    <div className={newClass}>
+    <div className={messageClass}>
       {state.messages.map((message) => {
-        console.log(state)
         var redClass = message.color === 'red' ? 'red' : ''
         var blueClass = message.color === 'blue' ? 'blue' : ''
         var greenClass = message.color === 'green' ? 'green' : ''
@@ -34,7 +33,7 @@ function App({state, dispatch}) {
          </div>
       })}
     </div>
-    <form className={lastClass}>
+    <form className={formClass}>
       <input className='input' type='text' placeholder='Message' id='message'/>
       <input id="submit" type='submit' value='Send' onClick={addMessage}/>
     </form>

@@ -20,10 +20,11 @@ function Admin({state, dispatch}) {
     dispatch({type: 'ADD_USER', payload: user})
   }
 
-  var customClass = state.loggedin === true ? 'hide': ''
+  var loginClass = state.loggedin === true ? 'hide': 'login'
 
   return (
-    <div className={customClass}>
+    <div className={loginClass}>
+    <div>
       <form className='color-selector'>
         <input type="radio" name="color" id="red" value="red"/>
         <label for="red" id="red-label">Red</label>
@@ -34,10 +35,13 @@ function Admin({state, dispatch}) {
         <input type="radio" name="color" id="yellow" value="yellow" />
         <label for="yellow" id="yellow-label">Yellow</label>
       </form>
+      </div>
+      <div>
       <form>
         <input className='input' type='text' placeholder='User Name' id='username'/>
         <input id="submit" type='submit' value='Enter Chatroom' onClick={Login}/>
       </form>
+    </div>
     </div>
   )
 }
