@@ -6,10 +6,10 @@ var socket = io(':3000')
 function Admin({state, dispatch}) {
   function Login(e) {
     e.preventDefault()
-    var radios = document.getElementsByTagName('input')
     var color;
+    var radios = document.getElementsByName('color')
     for (var i = 0; i < radios.length; i++) {
-      if (radios[i].type === 'radio' && radios[i].checked) {
+      if (radios[i].checked) {
         color = radios[i].value
       }
     }

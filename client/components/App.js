@@ -15,23 +15,26 @@ function App({state, dispatch}) {
     socket.emit('chat', message)
   }
 
+  var newClass = state.loggedin === false ? 'hide': 'chatlog'
+  var lastClass = state.loggedin === false ? 'hide': ''
+
   return ( <div>
     <h1>chat-chat</h1>
     <Admin state={state} dispatch={dispatch} />
-    <div className='chatlog'>
+    <div className={newClass}>
       {state.messages.map((message) => {
         console.log(state)
         var redClass = message.color === 'red' ? 'red' : ''
         var blueClass = message.color === 'blue' ? 'blue' : ''
         var greenClass = message.color === 'green' ? 'green' : ''
         var yellowClass = message.color === 'yellow' ? 'yellow' : ''
-        return <div className='chat'>
+        return <div>
           <p className='username'>{message.user}:</p>
           <p className={redClass + blueClass + greenClass + yellowClass}>{message.text}</p>
          </div>
       })}
     </div>
-    <form>
+    <form className={lastClass}>
       <input className='input' type='text' placeholder='Message' id='message'/>
       <input id="submit" type='submit' value='Send' onClick={addMessage}/>
     </form>

@@ -1,7 +1,9 @@
 .chatlog {
   width: 99%;
   text-align: center;
-  height: 300px;
+  height: 450px;
+  overflow: scroll;
+  position: relative;
 }
 
 h1 {
@@ -40,18 +42,6 @@ h1 {
   position: absolute;
   left: 10px;
 }
-
-/*.msg {
-  font-size: 16px;
-  border-radius: 20px;
-  color: black;
-  box-sizing: border-box;
-  padding: 8px 0 8px 0;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-  margin-left: 50px;
-  background-color: black;
-}*/
 
 .red {
   background-color: #ff4d4d;
