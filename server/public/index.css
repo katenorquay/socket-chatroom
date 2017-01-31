@@ -1,7 +1,12 @@
+body {
+  margin: 0;
+  background-color: #ffe1f9;
+}
+
 .chatlog {
   width: 99%;
   text-align: center;
-  height: 450px;
+  height: 420px;
   overflow: scroll;
   position: relative;
 }
@@ -9,7 +14,7 @@
 h1 {
   text-align: center;
   font-size: 70px;
-  color: #4db8ff;
+  color: #1647fb;
   font-family: 'Lobster', cursive;
 }
 
@@ -28,11 +33,11 @@ h1 {
   width: 20%;
   float:left;
   height: 54px;
-  background-color: #4db8ff;
+  background-color:  #1647fb;
   color: white;
   font-family: 'Lobster', cursive;
   font-size: 25px;
-  border: solid 1px #b3b3b3;
+  border: solid 1px white;
 }
 
 
@@ -58,7 +63,7 @@ h1 {
 }
 
 .blue {
-  background-color: #4db8ff;
+  background-color:  #1647fb;
   font-size: 16px;
   border-radius: 20px;
   color: black;
@@ -99,6 +104,7 @@ h1 {
 input[type="radio"] {
   width: 22px;
   height: 22px;
+  margin-top: 5px;
 }
 
 label {
@@ -112,12 +118,13 @@ label {
 
 .color-selector {
   display: block;
-  background-color: #ff4d4d;
+  background-color: #1647fb;
   width: 365px;
-  padding: 15px;
+  padding: 18px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+  border: solid 1px white;
 }
 
 .hide {
@@ -128,11 +135,11 @@ label {
   margin-top: 8%;
   margin-left: 15%;
   margin-right: 15%;
-  background-color: #66ff66;
+  background-color: #1647fb;
   height: 230px;
   padding: 20px;
   padding-top: 40px;
   box-sizing: border-box;
   border-radius: 20px;
-box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.12), inset -1px -6px 12px 0.1px #33ff33;
+box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.12), inset -1px -6px 12px 0.1px #b3b3b3;
 }

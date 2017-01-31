@@ -19,7 +19,7 @@ function App({state, dispatch}) {
   var formClass = state.loggedin === false ? 'hide': ''
 
   return ( <div>
-    <h1>chat-chat</h1>
+    <h1>Socket Chat</h1>
     <Admin state={state} dispatch={dispatch} />
     <div className={messageClass}>
       {state.messages.map((message) => {
