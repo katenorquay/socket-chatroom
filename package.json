@@ -28,6 +28,7 @@
     "nodemon": "^1.11.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-emoji-picker": "^1.0.12",
     "redux": "^3.6.0",
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2",

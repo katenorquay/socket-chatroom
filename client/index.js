@@ -9,7 +9,9 @@ var socket = io(':3000')
 const initialState = {
   loggedin: false,
   currentUser: {},
-  messages: []
+  messages: [],
+  emoji: null,
+  showEmojiPicker: false
 }
 
 const store = createStore(reducer, initialState)
