@@ -303,3 +303,7 @@ box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.12), inset -1px -6px 12px 0.1px #b
   width: 22px;
   height: 22px;
 }
+
+.emoji-div {
+  background-color: blue;
+}
