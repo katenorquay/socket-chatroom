@@ -1,30 +1,14 @@
 var React = require('react')
 var render = require('react-dom').render
-// var EmojiPicker = require('emoji-picker')
-// var emojiMap = require('react-emoji-picker/lib/emojiMap')
-
+var Emoji = require('emojione-picker');
 
 function EmojiPicker({state, dispatch}) {
   return (
-    <p ref="emoji">
-        <label htmlFor="emoji">Emoji</label>
-        <input name="emoji" id="emoji" value={this.state.emoji} autoComplete="off"
-          type={this.state.showEmojiPicker ? "search" : "text"}
-          onChange={this.updateState} onKeyDown={this.grabKeyPress}/>
-        {this.emojiPicker()}
-      </p>
+    <Emoji onClick={function(data){
+      console.log("Emoji chosen", data);
+    }} />
   )
 }
 
-emojiPicker: function() {
-  if(this.state.showEmojiPicker) {
-    return (
-      <EmojiPicker
-        style={emojiPickerStyles} onSelect={this.setEmoji}
-        query={this.state.emoji}
-      />
-    )
-  }
-},
 
  module.exports = EmojiPicker
