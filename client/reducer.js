@@ -11,6 +11,8 @@ function reducer(state, action) {
       newState.currentUser = payload
       newState.loggedin = true
       return newState
+    case 'SHOW_EMOJI':
+      newState.showEmojiPicker = true
     default:
         return newState
   }

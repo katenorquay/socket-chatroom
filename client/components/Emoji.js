@@ -1,12 +1,15 @@
 var React = require('react')
 var render = require('react-dom').render
-var Emoji = require('emojione-picker');
+var EmojiPicker = require('emojione-picker');
 
-function EmojiPicker({state, dispatch}) {
+function Emoji({state, dispatch}) {
+
+  var emojiClass = state.showEmojiPicker === true ? 'hide' : 'hide'
+
   return (
-    <Emoji onClick={function(data){
-      console.log("Emoji chosen", data);
-    }} />
+      <EmojiPicker className={emojiClass} onChange={function(data){
+        console.log("Emoji chosen", data)
+      }} />
   )
 }
 

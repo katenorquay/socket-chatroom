@@ -3,7 +3,7 @@ var render = require('react-dom').render
 var io = require('socket.io-client')
 var socket = io(':3000')
 var Admin = require('./Admin')
-var EmojiPicker = require('./Emoji')
+var Emoji = require('./Emoji')
 
 function App({state, dispatch}) {
   function addMessage (e) {
@@ -18,6 +18,7 @@ function App({state, dispatch}) {
 
   var messageClass = state.loggedin === false ? 'hide': 'chatlog'
   var formClass = state.loggedin === false ? 'hide': ''
+  var emojiClass = state.showEmojiPicker === true ? '': 'hide'
 
   return ( <div>
     <h1>Socket Chat</h1>
@@ -37,8 +38,8 @@ function App({state, dispatch}) {
     <form className={formClass}>
       <input className='input' type='text' placeholder='Message' id='message'/>
       <input id="submit" type='submit' value='Send' onClick={addMessage}/>
-      <EmojiPicker state={state} dispatch={dispatch} />
     </form>
+    <Emoji state={state} dispatch={dispatch} />
   </div>
   )
 }
