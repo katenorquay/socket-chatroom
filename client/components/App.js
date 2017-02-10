@@ -18,7 +18,6 @@ function App({state, dispatch}) {
 
   var messageClass = state.loggedin === false ? 'hide': 'chatlog'
   var formClass = state.loggedin === false ? 'hide': ''
-  var emojiClass = state.showEmojiPicker === true ? '' : 'hide'
 
   return ( <div>
     <h1>Socket Chat</h1>
@@ -32,14 +31,14 @@ function App({state, dispatch}) {
         return <div>
           <p className='username'>{message.user}:</p>
           <p className={redClass + blueClass + greenClass + yellowClass}>{message.text}</p>
-         </div>
+        </div>
       })}
     </div>
     <form className={formClass}>
       <input className='input' type='text' placeholder='Message' id='message'/>
       <input id="submit" type='submit' value='Send' onClick={addMessage}/>
+      <Emoji state={state} dispatch={dispatch} />
     </form>
-    <Emoji state={state}/>
   </div>
   )
 }

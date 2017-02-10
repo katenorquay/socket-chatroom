@@ -8,7 +8,7 @@ function Admin({state, dispatch}) {
     e.preventDefault()
     var color;
     var radios = document.getElementsByName('color')
-    for (var i = 0; i < radios.length; i++) {
+    for(var i = 0; i < radios.length; i++) {
       if (radios[i].checked) {
         color = radios[i].value
       }
@@ -27,13 +27,13 @@ function Admin({state, dispatch}) {
     <div>
       <form className='color-selector'>
         <input type="radio" name="color" id="red" value="red"/>
-        <label for="red" id="red-label">Red</label>
+        <label htmlFor="red" id="red-label">Red</label>
         <input type="radio" name="color" id="blue" value="blue" />
-        <label for="blue" id="blue-label">Blue</label>
+        <label htmlFor="blue" id="blue-label">Blue</label>
         <input type="radio" name="color" id="green" value="green" />
-        <label for="green" id="green-label">Green</label>
+        <label htmlFor="green" id="green-label">Green</label>
         <input type="radio" name="color" id="yellow" value="yellow" />
-        <label for="yellow" id="yellow-label">Yellow</label>
+        <label htmlFor="yellow" id="yellow-label">Yellow</label>
       </form>
       </div>
       <div>

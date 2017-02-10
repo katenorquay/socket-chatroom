@@ -1,13 +1,18 @@
 var React = require('react')
 var render = require('react-dom').render
-var EmojiPicker = require('emojione-picker');
+var Picker = require('emoji-mart').Picker
 
-function Emoji({state}) {
-  var emojiClass = state.showEmojiPicker === false ? '' : 'hide'
-    return (
-      <EmojiPicker className='hide' onChange={console.log('hello in picker')}/>
-    )
+function Emoji({state, dispatch}) {
+    if(state.showEmojiPicker) {
+      return (
+        <Picker/>
+      )
+    }
+    else {
+      return (
+        <p className='submit'onClick={()=> {dispatch({type: 'SHOW_EMOJI'})}}>Emoji</p>
+      )
+    }
 }
 
-
- module.exports = Emoji
+module.exports = Emoji
