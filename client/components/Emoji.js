@@ -6,8 +6,7 @@ function Emoji({state, dispatch}) {
 
   function addEmoji(emoji, event) {
     event.preventDefault
-    dispatch({type: 'ADD_EMOJI', payload: emoji.native})
-    console.log(emoji)
+    document.getElementById('message').value += emoji.native
   }
     if(state.showEmojiPicker) {
       return (

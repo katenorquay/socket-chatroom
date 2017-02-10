@@ -35,14 +35,14 @@ function Admin({state, dispatch}) {
         <input type="radio" name="color" id="yellow" value="yellow" />
         <label htmlFor="yellow" id="yellow-label">Yellow</label>
       </form>
-      </div>
-      <div>
+    </div>
+    <div>
       <form>
         <input className='input' type='text' placeholder='User Name' id='username'/>
         <input id="submit" type='submit' value='Enter Chatroom' onClick={Login}/>
       </form>
     </div>
-    </div>
+  </div>
   )
 }
 
