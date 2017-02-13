@@ -3,7 +3,7 @@ var render = require('react-dom').render
 var io = require('socket.io-client')
 var socket = io(':3000')
 
-function Admin({state, dispatch}) {
+function SignIn({state, dispatch}) {
   function Login(e) {
     e.preventDefault()
     var color;
@@ -47,4 +47,4 @@ function Admin({state, dispatch}) {
 }
 
 
-module.exports = Admin
+module.exports = SignIn
