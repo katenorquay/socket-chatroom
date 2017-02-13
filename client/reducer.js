@@ -12,11 +12,8 @@ function reducer(state, action) {
       newState.loggedin = true
       return newState
     case 'SHOW_EMOJI':
-      newState.showEmojiPicker = true
+      newState.showEmojiPicker = payload
       return newState
-    case 'ADD_EMOJI':
-        newState.messages[0].text += payload
-        return newState
     default:
         return newState
   }

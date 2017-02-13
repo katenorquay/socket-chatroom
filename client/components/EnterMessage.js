@@ -14,14 +14,17 @@ function EnterMessage({state, dispatch}) {
     }
     socket.emit('chat', message)
   }
-  if (state.loggedin) {
+
+  var formClass = state.loggedin === false ? 'hide': ''
+
     return (
-      <form>
+      <form className = {formClass}>
         <input className='input' type='text' placeholder='Message' id='message'/>
         <input id="submit" type='submit' value='Send' onClick={addMessage}/>
         <Emoji state={state} dispatch={dispatch} />
       </form>
     )
-  }
 
 }
+
+module.exports = EnterMessage

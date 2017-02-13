@@ -15,7 +15,7 @@ function Emoji({state, dispatch}) {
     }
     else {
       return (
-        <p className='submit'onClick={()=> {dispatch({type: 'SHOW_EMOJI'})}}>Emoji</p>
+        <p className='submit' onClick={()=> {dispatch({type: 'SHOW_EMOJI', payload: true})}}>Emoji</p>
       )
     }
 }

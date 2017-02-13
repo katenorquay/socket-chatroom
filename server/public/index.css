@@ -3,6 +3,10 @@ body {
   background-color: #ffe1f9;
 }
 
+.kate {
+  background-color: red;
+}
+
 .chatlog {
   width: 99%;
   text-align: center;

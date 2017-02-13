@@ -22,28 +22,28 @@ function SignIn({state, dispatch}) {
 
   var loginClass = state.loggedin === true ? 'hide': 'login'
 
-  return (
-    <div className={loginClass}>
-    <div>
-      <form className='color-selector'>
-        <input type="radio" name="color" id="red" value="red"/>
-        <label htmlFor="red" id="red-label">Red</label>
-        <input type="radio" name="color" id="blue" value="blue" />
-        <label htmlFor="blue" id="blue-label">Blue</label>
-        <input type="radio" name="color" id="green" value="green" />
-        <label htmlFor="green" id="green-label">Green</label>
-        <input type="radio" name="color" id="yellow" value="yellow" />
-        <label htmlFor="yellow" id="yellow-label">Yellow</label>
-      </form>
-    </div>
-    <div>
-      <form>
-        <input className='input' type='text' placeholder='User Name' id='username'/>
-        <input id="submit" type='submit' value='Enter Chatroom' onClick={Login}/>
-      </form>
-    </div>
-  </div>
-  )
+    return (
+      <div className={loginClass}>
+        <div>
+          <form className='color-selector'>
+            <input type="radio" name="color" id="red" value="red"/>
+            <label htmlFor="red" id="red-label">Red</label>
+            <input type="radio" name="color" id="blue" value="blue" />
+            <label htmlFor="blue" id="blue-label">Blue</label>
+            <input type="radio" name="color" id="green" value="green" />
+            <label htmlFor="green" id="green-label">Green</label>
+            <input type="radio" name="color" id="yellow" value="yellow" />
+            <label htmlFor="yellow" id="yellow-label">Yellow</label>
+          </form>
+        </div>
+        <div>
+          <form>
+            <input className='input' type='text' placeholder='User Name' id='username'/>
+            <input id="submit" type='submit' value='Enter Chatroom' onClick={Login}/>
+          </form>
+        </div>
+      </div>
+    )
 }
 
 
